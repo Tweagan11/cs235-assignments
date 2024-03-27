@@ -1,0 +1,2 @@
+Smith, Alice: 15
+Johnson, Bob: 10

@@ -6,9 +6,7 @@ using std::cout, std::endl;
 int main()
 {
     Stuff my_stuff(8, 3.14, "woot");
-    Stuff const more_stuff(-23456, 4546.2344e23, "epic");
-    
-    int result = my_stuff + more_stuff;
+    Stuff more_stuff(-23456, 4546.2344e23, "epic");
     
     cout << "I have stuff: " << endl;
     cout << my_stuff << endl;

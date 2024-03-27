@@ -7,6 +7,9 @@ using std::cout, std::cin, std::cerr, std::endl;
 #include <queue>
 using std::queue;
 
+#include <stack>
+using std::stack;
+
 #include "input.h"
 
 int main()

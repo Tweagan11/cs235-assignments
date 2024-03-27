@@ -28,10 +28,3 @@ Look through this file to understand what kinds of operations will be performed 
 Your assignments are submitted through Canvas (which in turn uses Gradescope). 
 
 You should turn in only the `.cpp` and `.h` files that you modify or create. Extra files provided with the assignment will be available within the autograder (and the autograder will overwrite any changes you make with the original versions). 
-
-
-## In-class Materials
-
-There are folders for each lecture containing the files that are used in class. If you would like to follow along in class, you are welcome to download that material. 
-
-If you are interested in using `git` to clone the entire repo, see [cloning_this_repo](./cloning_this_repo.md)

@@ -4,10 +4,10 @@ using std::string;
 #include <iostream>
 using std::cout, std::endl, std::ostream;
 
-// #include "noisy_vector_solution.h"
+#include "noisy_vector_solution.h"
 #include "noisy_vector.h"
 
-// #define DEBUG
+#define DEBUG
 #include "debug.h"
 
 template <class T>

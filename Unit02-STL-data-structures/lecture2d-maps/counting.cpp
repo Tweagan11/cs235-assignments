@@ -22,7 +22,7 @@ int main()
     cout << endl
          << "Counts" << endl
          << "-------------" << endl;
-    for (auto const &entry : counts)
+    for (auto &entry : counts)
     {
         cout << entry.first << ": " << entry.second << endl;
     }

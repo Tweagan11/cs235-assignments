@@ -15,12 +15,11 @@ using std::set;
 int main()
 {
     // Get words
-    map<size_t, set<string>> words_of_length;
+    map<int, set<string>> words_of_length;
     string word;
     while (input("Word: ", word))
     {
-        auto key = word.size();
-        words_of_length[key].insert(word);
+        words_of_length[word.size()].insert(word);
     }
 
     // Print words

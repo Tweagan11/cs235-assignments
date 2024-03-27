@@ -1,18 +1,18 @@
 #include <vector>
 #include <string>
-using std::string, std::getline, std::stoul;
+using std::string, std::getline;
 #include <iostream>
 using std::cout, std::cin, std::endl;
+using namespace std;
 
 class Counters
 {
-    // class fields default to private if they aren't in a public section.
-    std::vector<int> _counters;
+    vector<int> _counters;
 
 public:
     Counters(size_t size) : _counters(size)  // initialize a pre-allocated vector of size `size`
     {
-        for (size_t i = 0; i < size; i++)
+        for (int i = 0; i < size; i++)
         {
             _counters[i] = 0;
         }
@@ -23,33 +23,30 @@ public:
     }
 
     int increment(size_t which) {
-        return ++_counters.at(which-1);
+        return ++_counters.at(which);
     }
 
     int get(size_t which) const {
-        return _counters.at(which-1);
+        return _counters.at(which);
     }
 };
 
 bool input(string const& prompt, string &response) {
     cout << prompt;
-    return getline(cin, response) && (response != "");
+    getline(cin, response);
+    return (response != "");
 }
 
-std::ostream & operator<<(std::ostream &out, Counters const& counters) {
-    for (size_t i = 0; i < counters.size(); i++) {
-        out << i+1 << ": " << counters.get(i+1) << endl;
-    } 
-    return out;
-}
 
 int main() {
-    Counters counters(31);
+    Counters counters(32);
     string response;
     while (input("Day of month: ", response)) {
-       size_t day = stoul(response);
+       int day = std::stoi(response);
        counters.increment(day); 
     }
 
-    cout << counters << endl;
+    for (size_t i = 0; i < counters.size(); i++) {
+        cout << i << ": " << counters.get(i) << endl;
+    } 
 }

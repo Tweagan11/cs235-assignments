@@ -2,7 +2,9 @@
 using std::string;
 
 #include <iostream>
-using std::cout, std::cerr, std::endl;
+using std::cout;
+using std::cerr;
+using std::endl;
 
 #include <cstdlib>
 using std::atoi;
@@ -12,8 +14,8 @@ void reckless_with_your_data(int const& number, const string& phrase) {
     for (int i = 0; i < number; i++) {
         cout << phrase << endl;
     }
-    // number = 7;
-    // phrase = "I prefer anchovies";
+//    number = 1;
+//    phrase = "What a silly thing to say.";
 }
 
 int main(int argc, char** argv) {

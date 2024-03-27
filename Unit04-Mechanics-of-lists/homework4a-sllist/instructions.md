@@ -24,8 +24,8 @@ Create a singly linked list template class `SLList` in `SLList.h`.
 
 The following example will run the first automatic test:
 ```
-$ g++ tests.cpp -o tests
-$ ./tests 1
+g++ tests.cpp -o tests
+./tests 1
 ```
 **The possible tests for this assignment are 1, 2, 3, 4, or all.**
 
@@ -39,11 +39,3 @@ $ ./tests 1
 ## Grading
 
 `SLList.h` is worth 100 points.
-
-| Methods      | Points   |
-|--------------|----------|
-| push back    | 30       |
-| pop back     | 30       |
-| front        | 20       |
-| size & clear | 20       |
-| **Total**    | **100**  |

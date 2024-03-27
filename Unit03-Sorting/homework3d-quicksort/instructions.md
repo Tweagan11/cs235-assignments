@@ -101,8 +101,8 @@ int main() {
 
 The following example will run the first automatic test:
 ```
-$ g++ tests.cpp -o tests
-$ ./tests 1
+g++ tests.cpp -o tests
+./tests 1
 ```
 **The possible tests for this assignment are 1, 2, 3, 4, 5, 6, 7, or all.**
 
@@ -121,14 +121,3 @@ $ ./tests 1
 `QS.h` is worth 100 points.
 
 You will be graded on the correct implementation of `medianOfThree`, `partition`, and `sort`.
-
-| Methods                  | Points   |
-|--------------------------|----------|
-| median of three          | 10       |
-| partition already sorted | 15       |
-| partition reversed       | 15       |
-| partition shuffled       | 15       |
-| sort already sorted      | 15       |
-| sort reversed            | 15       |
-| sort shuffled            | 15       |
-| **Total**                | **100**  |

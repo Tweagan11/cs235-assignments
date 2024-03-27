@@ -32,8 +32,8 @@ Write a Double Linked List class in `DLList.h`. The class should be templated on
 
 The following example will run the first automatic test:
 ```
-$ g++ tests.cpp -o tests
-$ ./tests 1
+g++ tests.cpp -o tests
+./tests 1
 ```
 **The possible tests for this assignment are 1, 2, 3, 4, 5, 6, 7, 8, or all.**
 
@@ -51,15 +51,3 @@ $ ./tests 1
 ## Grading
 
 `DLList.h` is worth 100 points.
-
-| Methods           | Points   |
-|-------------------|----------|
-| push front & back | 12.5     |
-| insert            | 12.5     |
-| front & back      | 12.5     |
-| at                | 12.5     |
-| contains          | 12.5     |
-| pop front & back  | 12.5     |
-| remove            | 12.5     |
-| size & clear      | 12.5     |
-| **Total**         | **100**  |

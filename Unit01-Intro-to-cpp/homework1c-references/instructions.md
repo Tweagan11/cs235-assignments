@@ -6,7 +6,7 @@ Write a program in `sort.cpp` that sorts three command-line arguments (strings) 
 
 - You should implement a function `void sort(std::string& a, std::string& b, std::string& c)`
   - Modify `a`, `b`, and `c` directly to sort the strings
-- Sort the strings alphabetically.
+- Sort the strings shortest length to longest length. If two strings are the same length, sort them alphabetically.
   <li>HINT: you can <a href="https://www.geeksforgeeks.org/comparing-string-objects-using-relational-operators-c/">compare</a> C++ strings using relational operators.</li>
   <li>HINT: sorting three items at a time is known as a "bubble sort".</li>
 - The program should output the sorted strings separated by a space and followed by a newline
@@ -40,9 +40,6 @@ Write a `head` program in `head.cpp`.
 - If more lines are requested than the input file has, the program should just print as many lines as the file has and no extras.
 - Follow the formatting demonstrated in the example
 
-### Important
-On Mac OS and Linux, `head` is a pre-existing system command whose functionality you are immitating.  If you run `head` rather than `./head`, you will run the system version instead of the one you wrote.
-
 ### Examples
 Click a hyperlink to navigate to a specific example:
 
@@ -64,7 +61,7 @@ line 7
 
 **Expected output**
 ```
-$ ./head -5 sample_input_file.txt
+$ head -5 sample_input_file.txt
 line 1
 line 2
 line 3
@@ -72,36 +69,19 @@ line 4
 line 5
 ```
 
-#### <a id="1numlines">One argument-- number of lines provided example:</a>
-This is an example of how you'll see stdin being provided to a program in real life:
-
-**`sample_input_stdin.txt`**
-```
-input line 1
-input line 2
-input line 3
-```
+#### <a id="1numlines">One argument-- number of lines example:</a>
+`cin` input provided by autograder/user is italicized. Expected program output is unitalicized.
 **Expected output**
 ```
-$ cat sample_input_stdin.txt | ./head -3
+$ head -3
+*input line 1*
 input line 1
+*input line 2*
 input line 2
+*input line 3*
 input line 3
 ```
-
-Below is a visual of what the above example is doing. `cin` input provided by autograder/user is commented out. Expected program output is not.
-
-**Expected output**
-```
-$ ./head -3 
-// input line 1
-input line 1
-// input line 2
-input line 2
-// input line 3
-input line 3
-```
-#### <a id="1inputfile">One argument-- filename provided example:</a>
+#### <a id="1inputfile">One argument-- filename example:</a>
 **Expected output**
 
 **`sample_input_file.txt`**
@@ -122,7 +102,7 @@ line 12
 
 **Expected output**
 ```
-$ ./head sample_input_file.txt
+$ head sample_input_file.txt
 line 1
 line 2
 line 3
@@ -146,7 +126,7 @@ line 5
 
 **Expected output**
 ```
-$ ./head -9 sample_input_file.txt
+$ head -9 sample_input_file.txt
 line 1
 line 2
 line 3
@@ -157,7 +137,7 @@ line 5
 #### <a id="filedne">File that does not exist example:</a>
 **Expected output**
 ```
-$ ./head -1000 file_that_does_not_exist.txt
+$ head -1000 file_that_does_not_exist.txt
 ERROR: can't open file_that_does_not_exist.txt
 ```
 
@@ -165,18 +145,3 @@ ERROR: can't open file_that_does_not_exist.txt
 ## Grading
 
 `sort.cpp` and `head.cpp` are both worth 50 points.
-
-| Methods          | Points   |
-|------------------|----------|
-| no arguments     | 10       |
-| only lines       | 10       |
-| only input file  | 10       |
-| both arguments   | 10       |
-| not enough lines | 10       |
-| **Head**         | **50**   |
-| test1            | 12.5     |
-| test2            | 12.5     |
-| test3            | 12.5     |
-| test4            | 12.5     |
-| **Sort**         | **50**   |
-| **Total**        | **100**  |

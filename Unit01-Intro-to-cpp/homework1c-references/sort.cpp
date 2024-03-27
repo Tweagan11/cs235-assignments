@@ -1,8 +1,27 @@
 #include <iostream>
 #include <string>
+using namespace std;
 
 void sort(std::string& a, std::string& b, std::string& c) {
-    // implement sort here
+    string copy;
+    if (a > b || a > c){
+        if (a > b) {
+            copy = a;
+            a = b;
+            b = copy;
+        }
+        if (a > c) {
+            copy = a;
+            a = c;
+            c = copy;
+        }
+    }
+    if (b > c) {
+        copy = b;
+        b = c;
+        c = copy;
+    }
+
 }
 
 int main(int argc, char const* argv[]) {

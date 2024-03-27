@@ -21,7 +21,7 @@ orange
 
 **Usage**
 ```
-$ ./uniq input.txt
+$ uniq input.txt
 orange
 apple
 banana
@@ -44,11 +44,3 @@ banana
 ## Grading
 
 `uniq.cpp` is worth 100 points.
-
-| Methods  | Points  |
-|----------|---------|
-| cin 1    | 25      |
-| cin 2    | 25      |
-| file 1   | 25      |
-| file 2   | 25      |
-| **Uniq** | **100** |

@@ -1,8 +1,0 @@
-    A->B [color="red"]
-    B->C [color="red"]
-    C->D [color="red"]
-    D->E [color="red"]
-    E->F [color="red"]
-    F->G [color="red"]
-    G->H [color="red"]
-}

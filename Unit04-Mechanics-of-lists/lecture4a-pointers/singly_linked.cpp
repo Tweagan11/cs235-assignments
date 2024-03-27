@@ -5,76 +5,69 @@ using std::cout, std::endl;
 template <class T>
 class SLList
 {
-    public:
-    struct Node {
+    struct Node
+    {
         T value;
-        Node* next;
-        Node(T const& item) : value(item), next(nullptr) {}
+        Node *next;
+        Node(T const &item) : value(item), next(nullptr) {}
     };
-private:
-    Node* _head;
+
+    Node *head;
     size_t _size;
 
-    void _push_back(Node*& node, T const& item) {
-        if (node == nullptr) {
-            node = new Node(item);
+    void _push_back(Node *&node, T const &value)
+    {
+        if (node == nullptr)
+        {
+            node = new Node(value);
             _size++;
-        } else {
-            _push_back(node->next, item);
+        }
+        else
+        {
+            _push_back(node->next, value);
         }
     }
 
-    void _clear(Node*& node) {
-        if (node != nullptr) {
-            _clear(node->next);
-
-            delete node;
-            node = nullptr;
-            _size--;        
+    void _clear(Node *&node)
+    {
+        if (node == nullptr)
+        {
+            return;
         }
+        _clear(node->next);
+        delete node;
+        node = nullptr;
+        _size--;
     }
 
 public:
-    SLList() : _head(nullptr), _size(0) {}
-
-    ~SLList() {
+    SLList() : head(nullptr), _size(0) {}
+    ~SLList()
+    {
         clear();
     }
 
     T first() const
     {
         /* don't call this unless you're sure there is a value here! */
-        return _head->value;
+        return head->value;
     }
 
-    size_t size() const {
-        return _size;
-    }
+    size_t size() const { return _size; }
 
     void push_back(T const &item)
     {
-        _push_back(_head, item);
+        _push_back(head, item);
     }
 
     void clear()
     {
-        _clear(_head);
+        _clear(head);
     }
 };
 
-void epic() {
-    SLList<long long> list;
-    for (int i = 0; i < 10; i++) {
-        list.push_back(i);
-    }
-}
-
 int main()
 {
-    for (int i = 0; i < 1000000000; i++) {
-        epic();
-    }
-
     SLList<int> list;
     cout << "Size should be 0: " << list.size() << endl;
     list.push_back(7);
@@ -82,4 +75,24 @@ int main()
     cout << "Size should be 2: " << list.size() << endl;
     list.clear();
     cout << "Size should be 0: " << list.size() << endl;
+
+    Node* tom = new Node("Tom");
+    Node* sam = new Node("Sam");
+    Node* harry = new Node("Harry");
+    Node* jim = new Node("Jim");
+    Node* head = tom;
+    tom->next = sam;
+    sam->next = harry;
+    harry->next = jim;
+
+
+    Node* node_ptr = head; // point to the first node
+    while (node_ptr!=NULL){
+        cout << node_ptr->data;
+        if (node_ptr->next != NULL)
+        {
+            cout << " ==> ";
+        }
+    }
+    node_ptr = node_ptr->next; // move to the next node
 }

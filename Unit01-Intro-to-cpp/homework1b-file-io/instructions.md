@@ -25,7 +25,7 @@ Bob Johnson 5 2.0
 
 **Usage**
 ```
-$ ./reformat input_file.txt output_file.txt
+./reformat input_file.txt output_file.txt
 ```
 
 `output_file.txt`
@@ -36,7 +36,7 @@ Johnson, Bob: 10
 
 ## Longest Line
 
-Write a program in `longest_line.cpp` that reads an input file, and outputs the line containing the largest number of **words** to the console, not chars (i.e. to `cout`, **not** to an output file).
+Write a program in `longest_line.cpp` that reads an input file, and outputs the line containing the largest number of words.
 
 - You will receive a file name as a command line argument
   - `argc` will always be 2
@@ -50,9 +50,7 @@ Write a program in `longest_line.cpp` that reads an input file, and outputs the 
 
 `example.txt`:
 ```
-abcd efgh ijkl
-abcd 1234 efg
-cdef qwerty 123 qwe
+
 ```
 
 **Usage** 
@@ -68,13 +66,3 @@ cdef qwerty 123 qwe
 ## Grading
 
 `reformat.cpp` and `longest_line.cpp` are both worth 50 points.
-
-| Methods          | Points |
-|------------------|--------|
-| test 1           | 25     |
-| test 2           | 25     |
-| **Longest line** | **50** |
-| test 1           | 25     |
-| test 2           | 25     |
-| **Reformat**     | **50** |
-| **Total**        | **50** |

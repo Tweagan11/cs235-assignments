@@ -51,7 +51,9 @@ public:
 
     void insert(T item, int position) {
         // implement insert here
-        if(position >= m_size){
+        if(position > m_size){
+           throw std::out_of_range("");
+        } else if (position == m_size){
             push_back(item);
         }
         else{
@@ -68,6 +70,9 @@ public:
 
     void remove(int position) {
         // implement remove here
+        if(m_size == 0){
+            throw std::out_of_range("");
+        }
         for(int i = position; i < m_size; i++) {
             m_data[i] = m_data[i + 1];
         }
@@ -89,6 +94,10 @@ public:
 
     void clear() {
         // implement clear here
+        size_t delete_length = m_size;
+        for(int i = 0; i < delete_length; i++){
+            remove(i);
+        }
     }
 private:
 

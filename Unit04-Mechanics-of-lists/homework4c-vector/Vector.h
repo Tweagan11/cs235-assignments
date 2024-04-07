@@ -30,14 +30,6 @@ public:
     }
 
     void push_back(T item) {
-//        if(m_size < m_capacity){
-//            m_data[m_size] = item;
-//            m_size++;
-//        } else {
-//            grow();
-//            m_data[m_size] = item;
-//            m_size++;
-//        }
         if (m_size == m_capacity){
             grow();
         }
